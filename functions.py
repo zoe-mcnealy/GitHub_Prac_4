@@ -16,8 +16,10 @@ def get_number(lower, upper):
         try:
             user_number = int(input("Enter a number"))
             finished = True
-        except:
+        except ValueError:
             print("Please enter a valid integer.")
+            user_number = int(input("Enter a number"))
+
 
     while user_number < lower or user_number > upper:
         print("Invalid Number. Your Number has to be between ", lower, "and", upper)
